@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ксения Кажура](https://up.htmlacademy.ru/htmlcss/22/user/814221).
-* Наставник: `Неизвестно`.
+* Наставник: [Илья Туров] (https://htmlacademy.ru/profile/turov)
 
 ---
 

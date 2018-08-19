@@ -46,7 +46,7 @@
             <span class="reason-number">-№1-</span>
             <p class="reason-description">Седона-не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img class="reason-img" src="img\city.jpg" width="100" height "100" alt="Настоящий городок">
+          <img class="reason-img" src="img\city.jpg" width="100" height="100" alt="Настоящий городок">
           <ul class="feauture-list">
             <li class="feature-item">
               <h3 class="feature-title">Жилье</h3>
@@ -63,7 +63,7 @@
           </ul>
         </li>
         <li class="reason-item">
-          <img class="reason-img" src="img\bridge.jpg" width="100" height "100" alt="Мост дьявола">
+          <img class="reason-img" src="img\bridge.jpg" width="100" height="100" alt="Мост дьявола">
           <div class="reason-desc">
             <h3 class="reason-desc-title">Там есть мост дьявола</h3>
             <span class="reason-number">-№2-</span>
@@ -93,7 +93,20 @@
         Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц
       </p>
       <button class="hotels-offers-btn" type="button"></button>
-      <!-- Форма -->
+      <form class="search-form">
+        <h3 class="search-title">Поиск гостиницы в Седоне</h3>
+        <label class="search-label" for="check-in">Дата заезда</label>
+        <input class="search-date" type="date" name="check-in" id="check-in" value="2017-04-24">
+        <label class="search-label" for="check-out">Дата выезда</label>
+        <input class="search-date" type="date" name="check-out" id="check-out" value="2017-07-04">
+        <div class="guest-amount">
+          <label class="search-label" for="adult-amount">Взрослые:</label>
+          <input type="number" name="adult-amount" id="adult-amount" min="1" value="2">
+          <label class="search-label" for="child-amount">Дети:</label>
+          <input type="number" name="child-amount" id="child-amount" min="0" value="0">
+        </div>
+        <button class="search-btn" type="submit" name="search-btn" value="Найти">Найти</button>
+      </form>
     </div>
     <div class="map"></div>
   </main>

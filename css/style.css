@@ -1,4 +1,19 @@
-.main-body,
+.main-body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  background-image: url(/img/Background.jpg);
+  background-repeat: no-repeat;
+  background-size: 1200px 773px;
+  
+  
+}
 .hotels-body {
   margin: 0;
   padding: 0;
@@ -9,6 +24,9 @@
   color: #000000;
   text-transform: uppercase;
   background-color: #ffffff;
+  background-image: url(/img/Background1.jpg);
+  background-repeat: no-repeat;
+  background-size: 1200px 562px;
 }
 
 a {
@@ -46,11 +64,6 @@ button:focus
   color: rgba(0, 0, 0, 0.3);
 }
 
-.container {
-  background-image: url(/img/Background.jpg);
-  background-repeat: no-repeat;
-  background-color: #ffffff;
-}
 
 .reason-list {
   list-style: none;
@@ -260,10 +273,6 @@ p.reason-description {
   color: black;
 }
 
-.filters {
-  background-image: url(/img/Background1.jpg);
-  background-repeat: no-repeat;
-}
 
 .filters legend {
   font-size: 16px;
@@ -387,4 +396,10 @@ p.reason-description {
   font-weight: normal;
   text-align: center;
   background-color: #f2f2f2;
+}
+
+.logo-htmlacademy-img {
+  color: #231f20;
+
+
 }

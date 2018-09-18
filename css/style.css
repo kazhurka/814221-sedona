@@ -57,7 +57,7 @@ a {
   margin-bottom: 60px;
   padding-bottom: 60px;
   background-color: darkgreen;
-  background-image: url(/img/polygon.svg), url(/img/Background.jpg);
+  background-image: url(../img/polygon.svg), url(../img/Background.jpg);
   background-position: 50% 100%, 50% 30%;
   background-size: contain, 100% 100%;
   background-repeat: no-repeat, no-repeat;
@@ -76,8 +76,8 @@ a {
 }
 
 .main-nav-list {
-  list-style: none;
   display: flex;
+  list-style: none;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -98,8 +98,8 @@ a {
 }
 
 .reason-list {
-  list-style: none;
   display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
   flex-direction: row;
@@ -107,8 +107,8 @@ a {
 }
 
 .feature-list {
-  list-style: none;
   display: flex;
+  list-style: none;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -235,7 +235,7 @@ a {
 
 
 
-.feature-title { 
+.feature-title {
   margin: 0;
   margin-bottom: 30px;
   margin-left: auto;
@@ -255,7 +255,7 @@ a {
   width: 75px;
   height: 72px;
   background-color: white;
-  background-image: url(/img/icon-1.svg);
+  background-image: url(../img/icon-1.svg);
 
 }
 
@@ -268,7 +268,7 @@ a {
   width: 74px;
   height: 70px;
   background-color: white;
-  background-image: url(/img/icon-3.svg);
+  background-image: url(../img/icon-3.svg);
 
 }
 
@@ -281,7 +281,7 @@ a {
   width: 64px;
   height: 76px;
   background-color: white;
-  background-image: url(/img/icon-2.svg);
+  background-image: url(../img/icon-2.svg);
 
 }
 
@@ -444,7 +444,7 @@ a {
 .main-footer {
   display: flex;
   min-height: 120px;
-  padding-top: 50px;
+  padding-top: 36px;
   background-color: #ffffff;
 
 }
@@ -453,6 +453,7 @@ a {
   width: 11, 33%;
   min-height: 16px;
   margin-left: 11%;
+  margin-top: 16px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -463,13 +464,14 @@ a {
 
 .social-list {
   display: flex;
+  list-style: none;
   flex-wrap: wrap;
   min-width: 13%;
   min-height: 48px;
   margin: 0;
   padding: 0;
   margin: 0 auto;
-  list-style: none;
+  
 
 
 
@@ -535,9 +537,10 @@ a {
 .sort-list {
   display: flex;
   justify-content: center;
+  list-style: none;
   padding: 0;
   margin: 0;
-  list-style: none;
+ 
 
 
 }
@@ -583,6 +586,12 @@ a {
   color: #81b3d2;
 }
 
+.sort-btns {
+  margin-left: auto;
+  margin-right: 5%;
+
+}
+
 .sort-btn {
   margin-left: auto;
   margin-right: 0;
@@ -591,9 +600,10 @@ a {
 .hotel-list {
   display: flex;
   flex-direction: column;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  
 
 
 
@@ -629,7 +639,7 @@ a {
 
 .hotel-btn {
   width: 110px;
-  height: 27px;
+  height: 26px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 17px;
@@ -692,7 +702,7 @@ a {
   padding-left: 72px;
   padding-bottom: 30px;
   background-color: #604e43;
-  background-image: url(/img/Background1.jpg);
+  background-image: url(../img/Background1.jpg);
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -743,7 +753,10 @@ a {
   display: flex;
   align-items: center;
   width: 16.41%;
+  margin: 0;
   margin-right: 8.41%;
+  padding: 0;
+  max-height: 60px;
 
 }
 
@@ -831,21 +844,27 @@ a {
 }
 
 .stars-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: flex;
   flex-direction: row-reverse;
   flex-shrink: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 47px;
+  margin-right: 5%;
+}
+
+.star {
+  width: 18px;
+  height: 17px;
+  margin-right: 4%;
+  background-image: url(../img/star.svg);
+  background-size: 18px 17px;
+  background-repeat: no-repeat;
 
 
 }
 
-.star {
-  background-image: url(/img/star.svg);
-  background-size: 18px 17px;
-  background-repeat: no-repeat;
-  color: white;
-
-
+.rate-output {
+  margin-right: 13px;
 }

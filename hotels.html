@@ -42,30 +42,42 @@
       <form class="filters">
         <fieldset class="filter-group">
           <legend>Инфраструктура:</legend>
-          <input class="custom-checkbox" type="checkbox" name="pool" id="pool" checked>
+          <input class="custom-checkbox visually-hidden" type="checkbox" name="pool" id="pool" checked>
           <label class="custom-label" for="pool">Бассейн</label>
-          <input class="custom-checkbox" type="checkbox" name="parking" id="parking">
+          <input class="custom-checkbox visually-hidden" type="checkbox" name="parking" id="parking">
           <label class="custom-label" for="parking">Парковка</label>
-          <input class="custom-checkbox" type="checkbox" name="wifi" id="wifi">
+          <input class="custom-checkbox visually-hidden" type="checkbox" name="wifi" id="wifi">
           <label class="custom-label" for="wifi">wi-fi</label>
         </fieldset>
         <fieldset class="filter-group ">
           <legend>Тип жилья:</legend>
 
-          <input class="custom-checkbox" type="checkbox" name="hotel" id="hotel" checked>
+          <input class="custom-checkbox visually-hidden" type="checkbox" name="hotel" id="hotel" checked>
           <label class="custom-label" for="hotel">Гостиница</label>
 
 
-          <input class="custom-checkbox" type="checkbox" name="motel" id="motel" checked>
+          <input class="custom-checkbox visually-hidden" type="checkbox" name="motel" id="motel" checked>
           <label class="custom-label" for="motel">Мотель</label>
 
 
-          <input class="custom-checkbox" type="checkbox" name="apartment" id="apartment" checked>
+          <input class="custom-checkbox visually-hidden" type="checkbox" name="apartment" id="apartment" checked>
           <label class="custom-label" for="apartment">Апартаменты</label>
 
         </fieldset>
-        <fieldset class="filter-group">
-          <legend>Стоимость в сутки(Р):</legend>
+        <fieldset class="filter-group filter-range">
+          <div class="filter-range-title">Стоимость в сутки (р):</div>
+          <div class="price-controls">
+            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
+          <button class="btn-transparent" type="submit">Показать</button>
         </fieldset>
       </form>
       <div class="result">
@@ -101,7 +113,7 @@
             <figcaption class="hotel-description">
               <div class="hotel-info">
                 <a class="hotel-link">
-                  <h3 class="hotel-name">Amara Resort&amp;Spa</h3>
+                  <h3 class="hotel-name">Amara Resort &amp; Spa</h3>
                 </a>
                 <p class="hotel-text">
                   <span class="hotel-type hotel-type-1">Гостиница</span>

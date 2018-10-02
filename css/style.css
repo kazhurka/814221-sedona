@@ -9,7 +9,7 @@ html {
   box-sizing: inherit;
 }
 
-.img {
+img {
   max-width: 100%;
   height: auto;
 }
@@ -49,7 +49,8 @@ a {
   max-width: 1200px;
   min-width: 768px;
   margin: 0 auto;
-  box-shadow: 0px 0px 15px 4px rgba(135, 133, 135, 0.3);
+  box-shadow: 0 0 15px 4px rgba(135, 133, 135, 0.3);
+  overflow: hidden;
 }
 
 .main-header {
@@ -68,7 +69,6 @@ a {
 .main-nav {
   position: relative;
   width: 100%;
-
 }
 
 .main-logo {
@@ -77,6 +77,10 @@ a {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+}
+
+.main-logo img {
+  max-width: none;
 }
 
 .main-nav-item {
@@ -128,10 +132,14 @@ a {
 .intro::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 101%;
   height: 57px;
   background-image: url(../img/intro-mask.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 .reasons {
@@ -144,7 +152,6 @@ a {
   margin-bottom: 27px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -153,7 +160,6 @@ a {
 
 .reasons-description {
   margin: 0;
-  padding: 0;
   margin-bottom: 51px;
   font-weight: normal;
   font-size: 14px;
@@ -181,8 +187,7 @@ a {
 .reason-desc {
   width: 33.33%;
   margin: 0;
-  padding: 0;
-  padding-bottom: 60px;
+  padding-bottom: 38px;
   padding-top: 48px;
   padding-left: 4%;
   padding-right: 4%;
@@ -194,9 +199,9 @@ a {
 }
 
 .reason-desc-title {
-  width: 55%;
+  width: 65%;
   margin: 0 auto;
-  margin-bottom: 23px;
+  margin-bottom: 26px;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
@@ -217,18 +222,25 @@ a {
 .reason-description {
   font-weight: normal;
   margin: 0;
-  padding: 0;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
   color: #ffffff;
 }
 
-.reason-img {
+.reason-img-container {
+  position: relative;
   width: 66.66%;
   height: 256px;
-  object-fit: cover;
-  object-position: 0 54%;
+  overflow: hidden;
+}
+
+.reason-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto;
 }
 
 .reason-item-bottom {
@@ -243,12 +255,12 @@ a {
 .reason-item-bottom .reason-desc-title {
   color: #000000;
   width: 156px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .reason-item-bottom .reason-description {
   color: #333333;
-  width: 66%;
+  width: 62%;
   margin: 0 auto;
 }
 
@@ -283,7 +295,6 @@ a {
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -326,7 +337,6 @@ a {
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
@@ -336,7 +346,7 @@ a {
 
 .hotels-offers {
   min-height: 720px;
-  padding-top: 51px;
+  padding-top: 50px;
   text-align: center;
   background-color: #ffffff;
 }
@@ -356,7 +366,6 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 45px;
-  padding: 0;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -374,6 +383,7 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #766357;
+  border: none;
 }
 
 .hotels-offers-btn:hover {
@@ -388,21 +398,23 @@ a {
 .map {
   min-height: 592px;
   background-image: url(../img/map.jpg);
-
 }
 
 .search-form {
-  position: relative;
   width: 568px;
-  min-height: 395px;
-  margin-left: 316px;
+  margin: 0 auto;
+  padding-right: 52px;
+  padding-left: 52px;
+  padding-top: 53px;
+  padding-bottom: 53px;
   background-color: #ffffff;
   border: 1px solid #ffffff;
+  box-shadow: 0 4px 17px 0 rgb(179, 178, 178);
 }
 
 .search-label {
   display: inline-block;
-  margin-right: 14px;
+  margin-right: 21px;
   font-size: 14px;
   font-weight: bold;
   text-align: left;
@@ -410,51 +422,29 @@ a {
   text-transform: uppercase;
 }
 
-.check-in {
-  padding-top: 53px;
-  padding-right: 55px;
-  padding-left: 55px;
-  padding-bottom: 29px;
-
+.input-container:nth-child(2) .search-label {
+  margin-right: 17px;
 }
 
-.check-out {
-  padding-right: 55px;
-  padding-left: 55px;
+.input-container {
+  position: relative;
   padding-bottom: 30px;
 }
 
-.date-check-in-btn {
+.calendar {
   position: absolute;
-  left: 482px;
-  top: 61px;
+  right: 11px;
+  top: 8px;
   padding: 0;
-  background-color: #f2f2f2;
+  background-color: transparent;
   border: none;
 }
 
-.date-check-out-btn {
-  position: absolute;
-  left: 482px;
-  top: 127px;
-  padding: 0;
-  background-color: #f2f2f2;
-  border: none;
-}
-
-.date-check-out-btn:hover path {
+.calendar:hover path {
   fill: #000000;
 }
 
-.date-check-in-btn:hover path {
-  fill: #000000;
-}
-
-.date-check-in-btn:active path {
-  fill: #81b3d2;
-}
-
-.date-check-out-btn:active path {
+.calendar:active path {
   fill: #81b3d2;
 }
 
@@ -463,11 +453,11 @@ a {
   width: 344px;
   height: 38px;
   padding-right: 30px;
-  padding-left: 13px;
+  padding-left: 9px;
   font: inherit;
   text-transform: uppercase;
   background-color: #f2f2f2;
-  border: 1px solid #f2f2f2;
+  border: 2px solid #f2f2f2;
 }
 
 .search-date:hover {
@@ -476,30 +466,33 @@ a {
 
 .search-date:focus {
   background-color: #ffffff;
-  filter: drop-shadow(0 0 0.25rem #e5e5e5);
+  border-color: #e5e5e5;
   outline: none;
 }
 
 .search-date:hover path {
   fill: white;
+}
 
+.amount-container {
+  display: flex;
+  margin-bottom: 53px;
+  padding-left: 2px;
 }
 
 .adult-amount {
   display: inline-flex;
   align-items: center;
-  min-width: 280px;
+  width: 270px;
 }
 
 .child-amount {
   display: inline-flex;
   align-items: center;
-  min-width: 200px;
 }
 
 .adult-label {
-  margin-left: 13px;
-  margin-right: 40px;
+  margin-right: 41px;
 }
 
 .child-label {
@@ -565,9 +558,6 @@ a {
 }
 
 .search-btn {
-  position: absolute;
-  top: 279px;
-  left: 55px;
   width: 458px;
   height: 58px;
   font-weight: bold;
@@ -590,10 +580,16 @@ a {
 }
 
 .main-footer {
-  display: flex;
+  width: 100%;
   min-height: 120px;
   padding-top: 36px;
   background-color: #ffffff;
+}
+
+.main-footer-container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -601,46 +597,36 @@ a {
   position: relative;
   margin-top: -120px;
   background: rgba(255, 255, 255, 0.9);
-  padding-left: 11%;
-  padding-right: 12%;
 }
 
 .footer-hashtag {
-  width: 11, 33%;
   min-height: 16px;
-  /* margin-left: 11%; */
-  margin-top: 10px;
+  margin-left: 42px;
+  padding-top: 10px;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
   color: #000000;
-  /* margin-right: auto; */
 }
 
 .social-list {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
-  /* min-width: 300px; */
+  justify-content: space-between;
+  width: 150px;
   min-height: 48px;
   margin: 0;
   padding: 0;
-  margin-right: 55px;
-  /* margin-left: 21%; */
-  /* margin-right: auto; */
-  /* margin-left: auto; */
-  padding-left: 19px;
-  /* padding-right: 19px; */
+  margin-right: -25px;
 }
 
 .social-item {
-  width: 48px;
+  width: 46px;
   height: 48px;
-  /* margin-left: 12px; */
-  /* margin-right: auto; */
-  margin-right: 15px;
   padding-top: 13px;
+  margin-bottom: 6px;
   color: #ffffff;
   text-align: center;
   background-color: #81b3d2;
@@ -649,7 +635,6 @@ a {
 .social-button {
   color: #ffffff;
   background-color: #81b3d2;
-
 }
 
 .social-item:hover {
@@ -674,15 +659,10 @@ a {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  width: 16.41%;
   max-height: 60px;
   margin: 0;
-  /* margin-right: 8.41%; */
-  /* margin-left: auto; */
-  margin-top: -0.5%;
-  padding: 0;
-
-
+  margin-right: 13px;
+  margin-top: -6px;
 }
 
 .footer-copyright-text {
@@ -693,6 +673,10 @@ a {
   line-height: 26px;
   text-align: center;
   color: #000000;
+}
+
+.logo-htmlacademy-img {
+  flex-shrink: 0;
 }
 
 .logo-htmlacademy-img:hover path {
@@ -779,7 +763,6 @@ a {
   min-width: 340px;
   margin-left: 274px;
   padding-top: 0;
-
 }
 
 .filter-range-title {
@@ -828,7 +811,6 @@ a {
 .price-controls .max-price {
   padding-left: 20px;
   line-height: 33px;
-
 }
 
 .price-controls input {
@@ -935,7 +917,6 @@ a {
   list-style: none;
   padding: 0;
   margin: 0;
-
 }
 
 .sort {
@@ -1043,7 +1024,6 @@ a {
   list-style-type: none;
   margin: 0;
   padding: 0;
-
 }
 
 .hotel-item {
@@ -1094,13 +1074,11 @@ a {
 .hotel-name {
   margin: 0;
   margin-bottom: 7px;
-  padding: 0;
 }
 
 .hotel-text {
   margin: 0;
   margin-top: 5px;
-  padding: 0;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;

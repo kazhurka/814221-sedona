@@ -759,6 +759,11 @@ a {
   color: #000000;
 }
 
+.footer-htmlacademy-link {
+  display: block;
+  padding-top: 7px;
+}
+
 .logo-htmlacademy-img {
   -ms-flex-negative: 0;
   flex-shrink: 0;
